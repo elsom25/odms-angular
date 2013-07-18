@@ -5,12 +5,17 @@ html(lang='en' ng-app='odms')
     title ODMS
 
     script src='//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js'
-    script src='/js/application.js'
+    script src='/js/app.js'
+    script src='/js/things.js'
+    script src='/js/controllers.js'
 
   body(ng-controller='MainCtrl as main')
-    h1
-      | {{main.greet()}}
-    | Greeting:
-    input(ng-model='main.greeting')
+    h1 Things
+
+    ul
+      li(ng-repeat="thing in main.things()") {{thing}}
+
+    input(type='text' ng-model='main.newThing')
+    button(ng-click='main.addThing()') Add Thing
 
     .main(ng-view='')
