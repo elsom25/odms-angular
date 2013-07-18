@@ -1,0 +1,23 @@
+div(ng-controller='LoginCtrl as login')
+  .row(ng-show='login.error.length > 0')
+    .small-12.columns
+      .alert-box.alert
+        | {{login.error}}
+
+  .row
+    .small-12.columns
+      h1 Orientation Document Management System
+      p Please use your Quest credentials.
+      hr
+
+  .row
+    .large-6.columns
+      label(for='user') WatIAm Userid:
+      input#user(type='text' ng-model='login.user' placeholder='e.g. jc2mcgin')
+    .large-6.columns
+      label(for='pass') Password:
+      input#pass(type='password')
+
+  .row
+    .large-4.columns
+      button(ng-click='login.login()') Login
