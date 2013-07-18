@@ -1,8 +1,15 @@
-.main(ng-controller='MainCtrl as main')
-  h1 Things
+div(ng-controller='MainCtrl as main')
+  .row
+    .small-12.columns
+      h1 Things
 
-  ul
-    li(ng-repeat="thing in main.things()") {{thing}}
+  .row
+    .small-12.columns
+      ul
+        li(ng-repeat="thing in main.things()") {{thing}}
 
-  input(type='text' ng-model='main.newThing')
-  button(ng-click='main.addThing()') Add Thing
+  .row
+    .large-8.columns
+      input(type='text' ng-model='main.newThing' placeholder='New Thing')
+    .large-4.columns
+      button(ng-click='main.addThing()') Add Thing

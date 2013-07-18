@@ -4,10 +4,36 @@ html(lang='en' ng-app='odms')
     meta charset='utf-8'
     title ODMS
 
+    script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+
+    / Foundation
+    link href='/lib/css/normalize.css' rel='stylesheet'
+    link href='/lib/css/foundation.min.css' rel='stylesheet'
+    script src='/lib/js/foundation.min.js'
+
+    / AngularJS
     script src='//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js'
     script src='/js/app.js'
     script src='/js/things.js'
     script src='/js/controllers.js'
 
   body
-    div(ng-view='')
+    header.contain-to-grid.fixed
+      nav.top-bar
+        /! Title Area
+        ul.title-area
+          li.name
+            h1: a href='/' ODMS
+          li.toggle-topbar.menu-icon: a href="#"
+            span Menu
+
+        /! Content
+        section.top-bar-section
+          .right
+            ul
+              li: a href='#' Logout
+
+    article#main.main(role="main" ng-view)
+
+    / Standard JS
+    script src='/js/foundation.js'
