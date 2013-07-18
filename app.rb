@@ -28,10 +28,22 @@ class CoffeeEngine < Sinatra::Base
 
 end
 
+class PartialEngine < Sinatra::Base
+
+  set :views,   File.dirname(__FILE__)    + '/views/pages'
+
+  get "/pages/*.html" do
+    filename = params[:splat].first
+    slim filename.to_sym
+  end
+
+end
+
 class ODMS < Sinatra::Base
 
   use SassEngine
   use CoffeeEngine
+  use PartialEngine
 
   set :views,        File.dirname(__FILE__) + '/views'
   set :public_dir,   File.dirname(__FILE__) + '/public'

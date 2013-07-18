@@ -1,12 +1,16 @@
 doctype html
-html(ng-app='odms')
+html(lang='en' ng-app='odms')
   head
     meta charset='utf-8'
+    title ODMS
+
     script src='//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js'
     script src='/js/application.js'
-    title ODMS
+
   body(ng-controller='MainCtrl as main')
     h1
       | {{main.greet()}}
     | Greeting:
     input(ng-model='main.greeting')
+
+    .main(ng-view='')
