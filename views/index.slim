@@ -9,13 +9,5 @@ html(lang='en' ng-app='odms')
     script src='/js/things.js'
     script src='/js/controllers.js'
 
-  body(ng-controller='MainCtrl as main')
-    h1 Things
-
-    ul
-      li(ng-repeat="thing in main.things()") {{thing}}
-
-    input(type='text' ng-model='main.newThing')
-    button(ng-click='main.addThing()') Add Thing
-
-    .main(ng-view='')
+  body
+    div(ng-view='')

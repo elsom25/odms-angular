@@ -1,4 +1,4 @@
-app = angular.module('odms.services', [])
+app = angular.module('odms.things', [])
 
 class ThingModel
   constructor: -> @

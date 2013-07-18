@@ -1,4 +1,4 @@
-app = angular.module('odms', ['odms.services', 'odms.controllers'])
+app = angular.module('odms', ['odms.things', 'odms.controllers'])
 
 app.config ['$routeProvider',
   ($routeProvider) ->

@@ -48,9 +48,7 @@ class ODMS < Sinatra::Base
   set :views,        File.dirname(__FILE__) + '/views'
   set :public_dir,   File.dirname(__FILE__) + '/public'
 
-  set :slim, format: :html5
   set :partial_template_engine, :slim
-  enable :partial_underscores
 
   get '/' do
     slim :index
