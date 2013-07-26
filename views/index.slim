@@ -18,8 +18,10 @@ html(lang='en' ng-app='odms')
     script src='/js/documents.js'
     script src='/js/controllers.js'
 
+    script src='/lib/js/custom.modernizr.js'
+
   body
-    header.contain-to-grid.fixed
+    header.fixed
       nav.top-bar
         /! Title Area
         ul.title-area
@@ -44,11 +46,24 @@ html(lang='en' ng-app='odms')
     article#main.main(role="main" ng-view)
 
     #newDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
-      h3 Awesome. I have it.
-      p.lead Your couch. It is mine.
-      p Im a cool paragraph that lives inside of an even cooler modal. Wins
-      input(type='text' ng-model='main.newDoc' placeholder='New Document')
-      button(ng-click='main.addDocument()') Add Document
+      h3 New Document.
+      .row
+        .small-12.columns
+          input(type='text' ng-model='main.docTitle' placeholder='Document Title')
+      .row
+        .small-4.columns
+          select(ng-model='main.docTeam')
+            option(value='Arts') Arts
+            option(value='Math') Math
+            option(value='Cross-Campus') Cross-Campus
+        .small-4.columns
+          select(ng-model='main.docType')
+            option(value='event') Event
+            option(value='budget') Budget
+            option(value='sponsorship') Sponsorship
+        .small-4.columns
+          button(ng-click='main.addDocument()') Add Document
+
       a.close-reveal-modal &#215;
 
     / Standard JS

@@ -8,8 +8,17 @@ class MainController
     @model.documents
 
   addDocument: ->
-    @model.addDocument(@newDoc)
-    @newDoc = ''
+    d = new Date
+    doc =
+      team:  @docTeam
+      state: 'In Progress'
+      type: @docType
+      title: @docTitle
+      last_edited: "#{d.getFullYear()}-#{d.getMonth()+1}-#{d.getDate()}"
+      owner: null
+    console.log 'doc', doc
+    @model.addDocument doc
+    @docTitle = ''
 
 app.controller 'MainCtrl', ['DocumentService',
   (model) -> new MainController(model)

@@ -31,7 +31,7 @@ class DocumentModel
   ]
 
   addDocument: (doc) ->
-    if doc?.length
+    if doc?.title?.length
       @documents.push(doc)
       true
     else

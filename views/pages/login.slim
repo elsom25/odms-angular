@@ -11,14 +11,21 @@ div(ng-controller='LoginCtrl as login')
       p Please use your Quest credentials.
       hr
 
-  .row
-    .large-6.columns
-      label(for='user') WatIAm Userid:
-      input#user(type='text' ng-model='login.user' placeholder='e.g. jc2mcgin')
-    .large-6.columns
-      label(for='pass') Password:
-      input#pass(type='password')
+  form(data-abide)
+    .row
+      .large-6.columns
+        label(for='user')
+          ' WatIAm Userid:
+          small required
+        input#user(type='text' required ng-model='login.user' placeholder='e.g. jc2mcgin')
+        small.error Userid is required
+      .large-6.columns
+        label(for='pass')
+          ' Password:
+          small required
+        input#pass(type='password' required)
+        small.error Password is required
 
-  .row
-    .large-4.columns
-      button(ng-click='login.login()') Login
+    .row
+      .large-4.columns
+        button(ng-click='login.login()') Login
