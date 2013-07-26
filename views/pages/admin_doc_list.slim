@@ -1,0 +1,17 @@
+div(ng-controller='MainCtrl as main')
+  .row
+    .small-12.columns
+      h2
+        ' Document Listing
+        small Admin View
+
+  .row
+    .small-12.columns
+      ul
+        li(ng-repeat="doc in main.documents()") {{doc}}
+
+  .row
+    .large-8.columns
+      input(type='text' ng-model='main.newDoc' placeholder='New Document')
+    .large-4.columns
+      button(ng-click='main.addDocument()') Add Document

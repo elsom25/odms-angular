@@ -1,15 +1,24 @@
-app = angular.module('odms', ['odms.things', 'odms.controllers'])
+app = angular.module('odms', ['odms.documents', 'odms.controllers'])
 
 app.config ['$routeProvider',
   ($routeProvider) ->
     $routeProvider.when '/login',
       templateUrl: 'pages/login.html'
       controller:  'LoginCtrl'
-    $routeProvider.when '/view1',
-      templateUrl: 'pages/partial1.html'
+
+    $routeProvider.when '/admin/list',
+      templateUrl: 'pages/admin_doc_list.html'
       controller:  'MainCtrl'
-    $routeProvider.when '/view2',
-      templateUrl: 'pages/partial2.html'
+    $routeProvider.when '/admin/document/123',
+      templateUrl: 'pages/admin_doc.html'
       controller:  'MainCtrl'
+
+    $routeProvider.when '/list',
+      templateUrl: 'pages/doc_list.html'
+      controller:  'MainCtrl'
+    $routeProvider.when '/document/123',
+      templateUrl: 'pages/doc.html'
+      controller:  'MainCtrl'
+
     $routeProvider.otherwise redirectTo: '/login'
 ]

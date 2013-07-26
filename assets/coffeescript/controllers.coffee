@@ -4,13 +4,13 @@ class MainController
   newThing: ""
   constructor: (@model) ->
 
-  things: ->
-    @model.awesomeThings
+  documents: ->
+    @model.documents
 
-  addThing: ->
-    @model.addThing(@newThing)
+  addDocument: ->
+    @model.addDocument(@newDoc)
 
-app.controller 'MainCtrl', ['ThingService',
+app.controller 'MainCtrl', ['DocumentService',
   (model) -> new MainController(model)
 ]
 
@@ -34,12 +34,12 @@ class LoginController
       # redirect to standard index
       # console.log 'STANDARD'
       @error = ''
-      window.location = '#/view1'
+      window.location = '#/list'
     else if users[@user] == ADMIN
       console.log 'ADMIN'
       # redirect to admin page
       @error = ''
-      window.location = '#/view2'
+      window.location = '#/admin/list'
     else
       @error = "#{@user} is an invalid login"
 
