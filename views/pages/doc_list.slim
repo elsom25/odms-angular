@@ -7,7 +7,32 @@ div(ng-controller='MainCtrl as main')
 
   .row
     .small-12.columns
-      ul
-        li(ng-repeat='doc in main.documents()') {{doc}}
+      table
+        thead
+          tr
+            th Team
+            th Title
+            th Type
+            th Last Edited
+            th Status
+            th Notes
+            th Owner
+            th Actions
+        tbody
+          tr(ng-repeat='doc in main.documents()')
+            td.team
+              | {{doc.team}}
+            td.title
+              | {{doc.title}}
+            td.type
+              | {{doc.type}}
+            td.last_edited
+              | {{doc.last_edited}}
+            td.status
+              | {{doc.state}}
+            td.notes
+            td.owner
+              | {{doc.owner || '-'}}
+            td.action
 
       a.button href='' data-reveal-id='newDocument' Add New Document
