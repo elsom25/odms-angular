@@ -45,8 +45,8 @@ class LoginController
   ADMIN = 2
   # Private
   users =
-    jesse: STANDARD
-    admin: ADMIN
+    jc2mcgin: STANDARD
+    ad3min: ADMIN
 
 
   # Public
