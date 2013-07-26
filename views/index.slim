@@ -45,22 +45,34 @@ html(lang='en' ng-app='odms')
 
     article#main.main(role="main" ng-view)
 
-    #newDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
-      h3 New Document.
+    #newAdminDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
+      h3 New Document
       .row
         .small-12.columns
           input(type='text' ng-model='main.docTitle' placeholder='Document Title')
       .row
         .small-4.columns
-          select(ng-model='main.docTeam')
-            option(value='Arts') Arts
-            option(value='Math') Math
-            option(value='Cross-Campus') Cross-Campus
+          select(ng-model='main.docTeam' ng-options='t for t in main.teams' required)
+            option(value='') -- chose team --
         .small-4.columns
-          select(ng-model='main.docType')
-            option(value='event') Event
-            option(value='budget') Budget
-            option(value='sponsorship') Sponsorship
+          select(ng-model='main.docType' ng-options='t for t in main.types' required)
+            option(value='') -- chose type --
+        .small-4.columns
+          button(ng-click='main.addDocument()') Add Document
+
+      a.close-reveal-modal &#215;
+
+    #newMathDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
+      h3 New Document
+      .row
+        .small-12.columns
+          input(type='text' ng-model='main.docTitle' placeholder='Document Title')
+      .row
+        .small-4.columns
+          select(ng-model='main.docTeam' ng-options="t for t in main.teams | filter:'Math'" required)
+        .small-4.columns
+          select(ng-model='main.docType' ng-options='t for t in main.types' required)
+            option(value='') -- chose type --
         .small-4.columns
           button(ng-click='main.addDocument()') Add Document
 

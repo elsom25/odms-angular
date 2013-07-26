@@ -3,14 +3,13 @@ div(ng-controller='MainCtrl as main')
     .small-12.columns
       h2
         ' Document Listing
-        small Standard View
+        small Math
 
   .row
     .small-12.columns
       table
         thead
           tr
-            th Team
             th Title
             th Type
             th Last Edited
@@ -19,9 +18,7 @@ div(ng-controller='MainCtrl as main')
             th Owner
             th Actions
         tbody
-          tr(ng-repeat='doc in main.documents()')
-            td.team
-              | {{doc.team}}
+          tr(ng-repeat="doc in main.documents() | filter:{team: 'Math'}")
             td.title
               | {{doc.title}}
             td.type
@@ -35,4 +32,4 @@ div(ng-controller='MainCtrl as main')
               | {{doc.owner || '-'}}
             td.action
 
-      a.button href='' data-reveal-id='newDocument' Add New Document
+      a.button href='' data-reveal-id='newMathDocument' Add New Document

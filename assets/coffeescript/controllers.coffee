@@ -4,6 +4,22 @@ class MainController
   newThing: ""
   constructor: (@model) ->
 
+  teams: [
+    'AHS'
+    'Arts'
+    'Science'
+    'Engineering'
+    'Environment'
+    'Math'
+    'Cross-Campus'
+  ]
+
+  types: [
+    'Event'
+    'Budget'
+    'Sponsorship'
+  ]
+
   documents: ->
     @model.documents
 
@@ -14,7 +30,7 @@ class MainController
       state: 'In Progress'
       type: @docType
       title: @docTitle
-      last_edited: "#{d.getFullYear()}-#{d.getMonth()+1}-#{d.getDate()}"
+      last_edited: "#{d.getFullYear()}-0#{d.getMonth()+1}-#{d.getDate()}"
       owner: null
     console.log 'doc', doc
     @model.addDocument doc
