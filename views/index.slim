@@ -43,5 +43,13 @@ html(lang='en' ng-app='odms')
 
     article#main.main(role="main" ng-view)
 
+    #newDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
+      h3 Awesome. I have it.
+      p.lead Your couch. It is mine.
+      p Im a cool paragraph that lives inside of an even cooler modal. Wins
+      input(type='text' ng-model='main.newDoc' placeholder='New Document')
+      button(ng-click='main.addDocument()') Add Document
+      a.close-reveal-modal &#215;
+
     / Standard JS
     script src='/js/foundation.js'

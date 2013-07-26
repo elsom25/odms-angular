@@ -9,6 +9,7 @@ class MainController
 
   addDocument: ->
     @model.addDocument(@newDoc)
+    @newDoc = ''
 
 app.controller 'MainCtrl', ['DocumentService',
   (model) -> new MainController(model)
