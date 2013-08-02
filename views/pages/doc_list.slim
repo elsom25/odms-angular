@@ -29,13 +29,13 @@ div(ng-controller='MainCtrl as main')
       table
         thead
           tr
-            th.title Title
-            th.type Type
-            th.last_edited Last Edited
-            th.status Status
-            th.notes Notes
-            th.owner Owner
-            th.action Actions
+            th Title
+            th Type
+            th Last Edited
+            th Status
+            th Notes
+            th Owner
+            th Actions
         tbody
           tr(ng-repeat="doc in main.documents() | filter:{team: 'Math'}")
             td.title
@@ -48,6 +48,7 @@ div(ng-controller='MainCtrl as main')
               .label.radius.status ng-class="doc.state | lowercase"
                 | {{doc.state}}
             td.notes
+              | {{doc.note || '-'}}
             td.owner
               | {{doc.owner || '-'}}
             td.action

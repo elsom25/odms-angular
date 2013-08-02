@@ -9,6 +9,7 @@ class DocumentModel
       state: 'Reviewing'
       type: 'budget'
       title: 'Budget'
+      note: ''
       last_edited: '2013-07-26'
       owner: null
     }
@@ -17,6 +18,7 @@ class DocumentModel
       state: 'In Progress'
       type: 'event'
       title: 'Earn Your Tie'
+      note: ''
       last_edited: '2013-07-26'
       owner: 'Sacha Forstner'
     }
@@ -25,6 +27,7 @@ class DocumentModel
       state: 'Needs Rework'
       type: 'event'
       title: 'Monte Carlo'
+      note: 'Redo section 3.'
       last_edited: '2013-07-22'
       owner: null
     }
