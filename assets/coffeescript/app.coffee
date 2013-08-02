@@ -11,6 +11,9 @@ app.config ['$routeProvider',
     $routeProvider.when '/admin/list',
       templateUrl: 'pages/admin_doc_list.html'
       controller:  'MainCtrl'
+    $routeProvider.when '/admin/document/13',
+      templateUrl: 'pages/admin_doc.html'
+      controller:  'MainCtrl'
 
     # NON-ADMIN standard routes
     $routeProvider.when '/list',

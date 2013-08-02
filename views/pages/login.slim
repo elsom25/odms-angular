@@ -1,3 +1,17 @@
+header
+  nav.top-bar
+    /! Title Area
+    ul.title-area
+      li.name
+        h1: a href='/' ODMS
+      li.toggle-topbar.menu-icon: a href="#"
+        span Menu
+
+    /! Content
+    section.top-bar-section
+      ul.right
+        li: a href='#' Login
+
 div(ng-controller='LoginCtrl as login')
   .row(ng-show='login.error.length > 0')
     .small-12.columns
