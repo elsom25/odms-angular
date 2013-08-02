@@ -18,7 +18,7 @@ class FeedbackModel
 
   addFeedback: (task) ->
     if task?.title?.length
-      @tasklist.push(task)
+      @feedback.push(task)
       true
     else
       false
