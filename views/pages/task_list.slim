@@ -14,7 +14,7 @@ div(ng-controller='MainCtrl as main')
             th By
             th Date
         tbody
-          tr(ng-repeat="task in main.tasklist()"
+          tr(ng-repeat="task in main.tasklist()")
             td.title
               | {{task.title}}
             td.owner
@@ -22,4 +22,4 @@ div(ng-controller='MainCtrl as main')
             td.date
               | {{task.date}}
 
-      a.button href='' data-reveal-id='' Add New Document
+      a.button href='' data-reveal-id='' Add New Task
