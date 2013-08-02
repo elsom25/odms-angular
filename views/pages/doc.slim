@@ -17,52 +17,52 @@ div(ng-controller='MainCtrl as main')
             th Date
         tbody
           tr
-            td.revision 4
+            td.revision 7
             td.details Great! Looks good.
             td.status
-              span.state' In Progress
+              .label.radius.status.reviewing' Reviewing
               ' ->
-              span.state Pending
+              .label.radius.status.accepted Accepted
             td.action
               a.button.small.radius.secondary View
-            td.date 2013-07-26
+            td.date 2013-07-17
+          tr
+            td.revision 6
+            td.details Reviewing.
+            td.status
+              .label.radius.status.pending' Pending
+              ' ->
+              .label.radius.status.reviewing Reviewing
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-09
+          tr
+            td.revision 5
+            td.details Completely revamped sections 2-4. A few cleanups elsewhere, but nothing big.
+            td.status
+              .label.radius.status.in.progress' In Progress
+              ' ->
+              .label.radius.status.pending Pending
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-07
           tr
             td.revision 4
-            td.details Great! Looks good.
-            td.status
-              span.state' In Progress
-              ' ->
-              span.state Pending
-            td.action
-              a.button.small.radius.secondary View
-            td.date 2013-07-26
-          tr
-            td.revision 4
-            td.details Great! Looks good.
-            td.status
-              span.state' In Progress
-              ' ->
-              span.state Pending
-            td.action
-              a.button.small.radius.secondary View
-            td.date 2013-07-26
-          tr
-            td.revision 3
             td.details Meeting w/ Directors had to revision necessary sections.
             td.status
-              span.state' Needs Rework
+              .label.radius.status.needs.rework' Needs Rework
               ' ->
-              span.state In Progress
+              .label.radius.status.in.progress In Progress
             td.action
               a.button.small.radius.secondary View
-            td.date 2013-07-26
+            td.date 2013-06-26
           tr
             td.revision 3
             td.details Please revist sections 2-4.
             td.status
-              span.state' Reviewing
+              .label.radius.status.reviewing' Reviewing
               ' ->
-              span.state Needs Rework
+              .label.radius.status.needs.rework Needs Rework
             td.action
               a.button.small.radius.secondary View
             td.date 2013-06-18
@@ -70,9 +70,9 @@ div(ng-controller='MainCtrl as main')
             td.revision 2
             td.details First round of reviews started.
             td.status
-              span.state' Pending
+              .label.radius.status.pending' Pending
               ' ->
-              span.state Reviewing
+              .label.radius.status.reviewing Reviewing
             td.action
               a.button.small.radius.secondary View
             td.date 2013-06-10
@@ -80,9 +80,9 @@ div(ng-controller='MainCtrl as main')
             td.revision 1
             td.details Please review ASAP.
             td.status
-              span.state' In Progress
+              .label.radius.status.in.progress' In Progress
               ' ->
-              span.state Pending
+              .label.radius.status.pending Pending
             td.action
               a.button.small.radius.secondary View
             td.date 2013-06-09
