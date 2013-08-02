@@ -1,9 +1,10 @@
 div(ng-controller='MainCtrl as main')
-  .row
+  .row.header
     .small-12.columns
       h2
         ' Document Listing
         small Math
+	a.button href='' data-reveal-id='newAdminDocument' Add New Document
 
   .row
     .small-12.columns
@@ -38,5 +39,3 @@ div(ng-controller='MainCtrl as main')
               a.button.small.radius ng-show="doc.state == 'Pending'" ng-click="doc.state = 'In Progress'" Unsubmit
               a.button.small.radius.secondary ng-show="doc.state == 'In Progress'" Edit
               a.button.small.radius.secondary ng-hide="doc.state == 'In Progress'" View
-
-      a.button href='' data-reveal-id='newMathDocument' Add New Document

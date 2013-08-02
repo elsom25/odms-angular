@@ -3,16 +3,16 @@ table {
 	.details { width:35%; }
 }
 
-button {
+.button {
 	margin-right: 0.3em;
 }
 
-.inline {
-	display: inline;
-}
-
-.button.addNewDoc {
-	float:right;
+.header {
+	h2 { display: inline; }
+	.button {
+		margin-top:0.5em; 
+		float:right;
+	}
 }
 
 $colorBlue: #2284A1;
