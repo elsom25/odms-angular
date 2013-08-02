@@ -1,7 +1,6 @@
 table {
 	width:100%;
 	.details { width:35%; }
-	.action { width:21%; }
 }
 
 .top-bar {
@@ -18,6 +17,13 @@ table {
 		margin-top:0.5em;
 		float:right;
 	}
+}
+
+footer.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 $colorBlue: #2284A1;
