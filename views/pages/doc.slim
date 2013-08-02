@@ -12,7 +12,8 @@ div(ng-controller='MainCtrl as main')
           tr
             th Revision
             th Details
-            th Status
+            th Start Status
+            th End Status
             th Action
             th Date
         tbody
@@ -21,7 +22,7 @@ div(ng-controller='MainCtrl as main')
             td.details Great! Looks good.
             td.status
               .label.radius.status.reviewing' Reviewing
-              ' ->
+            td.status
               .label.radius.status.accepted Accepted
             td.action
               a.button.small.radius.secondary View
@@ -31,7 +32,7 @@ div(ng-controller='MainCtrl as main')
             td.details Reviewing.
             td.status
               .label.radius.status.pending' Pending
-              ' ->
+            td.status
               .label.radius.status.reviewing Reviewing
             td.action
               a.button.small.radius.secondary View
@@ -41,7 +42,7 @@ div(ng-controller='MainCtrl as main')
             td.details Completely revamped sections 2-4. A few cleanups elsewhere, but nothing big.
             td.status
               .label.radius.status.in.progress' In Progress
-              ' ->
+            td.status
               .label.radius.status.pending Pending
             td.action
               a.button.small.radius.secondary View
@@ -51,7 +52,7 @@ div(ng-controller='MainCtrl as main')
             td.details Meeting w/ Directors had to revision necessary sections.
             td.status
               .label.radius.status.needs.rework' Needs Rework
-              ' ->
+            td.status
               .label.radius.status.in.progress In Progress
             td.action
               a.button.small.radius.secondary View
@@ -61,7 +62,7 @@ div(ng-controller='MainCtrl as main')
             td.details Please revist sections 2-4.
             td.status
               .label.radius.status.reviewing' Reviewing
-              ' ->
+            td.status
               .label.radius.status.needs.rework Needs Rework
             td.action
               a.button.small.radius.secondary View
@@ -71,7 +72,7 @@ div(ng-controller='MainCtrl as main')
             td.details First round of reviews started.
             td.status
               .label.radius.status.pending' Pending
-              ' ->
+            td.status
               .label.radius.status.reviewing Reviewing
             td.action
               a.button.small.radius.secondary View
@@ -81,7 +82,7 @@ div(ng-controller='MainCtrl as main')
             td.details Please review ASAP.
             td.status
               .label.radius.status.in.progress' In Progress
-              ' ->
+            td.status
               .label.radius.status.pending Pending
             td.action
               a.button.small.radius.secondary View
