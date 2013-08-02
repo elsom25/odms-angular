@@ -7,12 +7,12 @@ require 'slim'
 
 class SassEngine < Sinatra::Base
 
-  set :views,   File.dirname(__FILE__)    + '/assets/sass'
+  set :views,   File.dirname(__FILE__)    + '/assets/scss'
   set :scss,    {style: :compact, debug_info: false}
 
   get '/css/*.css' do
     filename = params[:splat].first
-    sass filename.to_sym
+    scss filename.to_sym
   end
 
 end
