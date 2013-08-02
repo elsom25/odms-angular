@@ -6,7 +6,7 @@ class DocumentModel
   documents: [
     {
       team: 'Math'
-      state: 'Admin Reviewing'
+      state: 'Reviewing'
       type: 'budget'
       title: 'Budget'
       last_edited: '2013-07-26'
