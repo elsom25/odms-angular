@@ -11,6 +11,8 @@ header
     section.top-bar-section
       ul.left
         li.divider
+        li: a href='/#/activity' Activity Stream
+        li.divider
         li: a href='/#/list' Document List
         li.divider
       ul.right
@@ -57,3 +59,4 @@ div(ng-controller='MainCtrl as main')
               a.button.small.radius ng-show="doc.state == 'Pending'" ng-click="doc.state = 'In Progress'" Unsubmit
               a.button.small.radius.secondary ng-show="doc.state == 'In Progress'" Edit
               a.button.small.radius.secondary ng-hide="doc.state == 'In Progress'" View
+              a.button.small.radius.secondary href='/#/feedback/13' Feedback

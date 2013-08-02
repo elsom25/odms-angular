@@ -22,28 +22,27 @@ div(ng-controller='MainCtrl as main')
   .row
     .small-12.columns
       h2
-        ' Activity Stream
-        small Team View
-  /
-    .row
-      .small-8.columns
-        input(type='text' ng-model='main.newTask' placeholder='Add new Task')
-      .small-4.columns
-        
-        a.button.small(ng-click='main.addTask()') Add
+        ' Feedback #13: Earn Your Tie
+        small Event
+  .row
+    .small-8.columns
+      input(type='text' ng-model='main.newFeedback' placeholder='Add Feedback')
+    .small-4.columns
+      
+      a.button.small(ng-click='main.addFeedback()') Add
   .row
     .small-12.columns
       table
         thead
           tr
-            th Action
+            th Feedback
             th By
             th Date
         tbody
-          tr(ng-repeat="task in main.tasklist()")
+          tr(ng-repeat="fb in main.feedback()")
             td.title
-              | {{task.title}}
+              | {{fb.title}}
             td.owner
-              | {{task.owner}}
+              | {{fb.owner}}
             td.date
-              | {{task.date}}
+              | {{fb.date}}

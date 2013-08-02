@@ -1,4 +1,4 @@
-app = angular.module('odms', ['odms.documents', 'odms.tasklist', 'odms.controllers'])
+app = angular.module('odms', ['odms.documents', 'odms.tasklist', 'odms.feedback', 'odms.controllers'])
 
 app.config ['$routeProvider',
   ($routeProvider) ->
@@ -22,8 +22,11 @@ app.config ['$routeProvider',
     $routeProvider.when '/document/13',
       templateUrl: 'pages/doc.html'
       controller:  'MainCtrl'
+    $routeProvider.when '/feedback/13',
+      templateUrl: 'pages/feedback.html'
+      controller:  'MainCtrl'
 
-    $routeProvider.when '/tasklist',
+    $routeProvider.when '/activity',
       templateUrl: 'pages/task_list.html'
       controller: 'MainCtrl'
 
