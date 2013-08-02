@@ -24,29 +24,7 @@ html(lang='en' ng-app='odms')
     script src='/lib/js/custom.modernizr.js'
 
   body
-    header.fixed
-      nav.top-bar
-        /! Title Area
-        ul.title-area
-          li.name
-            h1: a href='/' ODMS
-          li.toggle-topbar.menu-icon: a href="#"
-            span Menu
-
-        /! Content
-        section.top-bar-section
-          ul.left
-            li.divider
-            li: a href='/#/admin/list' Admin
-            li.divider
-            li: a href='/#/list' Non-Admin
-            li: a href='/#/document/13' Document
-            li: a href='/#/tasklist' Tasklist
-            li.divider
-          ul.right
-            li: a href='#' Logout
-
-    article#main.main(role="main" ng-view)
+    div(role="main" ng-view)
 
     #newAdminDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
       h3 New Document

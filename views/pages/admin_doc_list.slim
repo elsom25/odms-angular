@@ -1,3 +1,21 @@
+header
+  nav.top-bar
+    /! Title Area
+    ul.title-area
+      li.name
+        h1: a href='/' ODMS
+      li.toggle-topbar.menu-icon: a href="#"
+        span Menu
+
+    /! Content
+    section.top-bar-section
+      ul.left
+        li.divider
+        li: a href='/#/admin/list' Document List
+        li.divider
+      ul.right
+        li: a href='#' Logout
+
 div(ng-controller='MainCtrl as main')
   .row.header
     .small-12.columns
@@ -23,7 +41,7 @@ div(ng-controller='MainCtrl as main')
             td.team
               | {{doc.team}}
             td.title
-              a href='/#/document/13' {{doc.title}}
+              a href='/#/admin/document/13' {{doc.title}}
             td.type
               | {{doc.type}}
             td.last_edited
