@@ -1,7 +1,7 @@
 app = angular.module('odms.controllers', [])
 
 class MainController
-  newThing: ""
+  newThing: ''
   constructor: (@model) ->
 
   teams: [
@@ -15,9 +15,9 @@ class MainController
   ]
 
   types: [
-    'Event'
-    'Budget'
-    'Sponsorship'
+    'event'
+    'budget'
+    'sponsorship'
   ]
 
   documents: ->
@@ -32,7 +32,6 @@ class MainController
       title: @docTitle
       last_edited: "#{d.getFullYear()}-0#{d.getMonth()+1}-#{d.getDate()}"
       owner: null
-    console.log 'doc', doc
     @model.addDocument doc
     @docTitle = ''
 
@@ -41,13 +40,12 @@ app.controller 'MainCtrl', ['DocumentService',
 ]
 
 class LoginController
+  # Private
   STANDARD = 1
   ADMIN = 2
-  # Private
   users =
     jc2mcgin: STANDARD
     ad3min: ADMIN
-
 
   # Public
   user: ''
