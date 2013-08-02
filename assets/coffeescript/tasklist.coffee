@@ -7,12 +7,12 @@ class TaskModel
     {
       title: 'Sponsor document has been approved'
       owner: 'Terry'
-      date: '2013/07/31'
+      date: '2013-07-31'
     }
     {
       title: 'Sponsor document has been approved2'
       owner: 'Terry'
-      date: '2013/07/31'
+      date: '2013-07-31'
     }
   ]
 

@@ -42,7 +42,7 @@ class MainController
     d = new Date
     task = 
       title: @newTask
-      date: "#{d.getFullYear()}/0#{d.getMonth()+1}/0#{d.getDate()}"
+      date: "#{d.getFullYear()}-0#{d.getMonth()+1}-0#{d.getDate()}"
       owner: "OWNER"
     @taskModel.addTask task
     @newTask = ''
