@@ -28,14 +28,14 @@ div(ng-controller='MainCtrl as main')
       table
         thead
           tr
-            th Team
-            th Title
-            th Type
-            th Last Edited
-            th Status
-            th Notes
-            th Owner
-            th Actions
+            th.team Team
+            th.title Title
+            th.type Type
+            th.last_edited Last Edited
+            th.status Status
+            th.notes Notes
+            th.owner Owner
+            th.action Actions
         tbody
           tr(ng-repeat='doc in main.documents()')
             td.team

@@ -1,6 +1,7 @@
 table {
 	width:100%;
 	.details { width:35%; }
+	.action { width:21%; }
 }
 
 .top-bar {
@@ -14,7 +15,7 @@ table {
 .header {
 	h2 { display: inline; }
 	.button {
-		margin-top:0.5em; 
+		margin-top:0.5em;
 		float:right;
 	}
 }
