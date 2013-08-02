@@ -8,27 +8,23 @@ $colorSnowGrey: #8B8989;
 
 .status {
 	font-size:0.9em;
+	font-weight:400 !important;
 	letter-spacing:0.2em;
 	text-transform:uppercase;
-	padding: 0.25em 0.625em;
+	padding: 0.25em 0.625em !important;
 	&.needs.rework {
 		background-color:$colorRed;
-		border-color:darken($colorRed, 15%);
 	}
 	&.in.progress {
 		background-color:$colorBlue;
-		border-color:darken($colorBlue, 15%);
 	}
 	&.pending {
 		background-color:$colorSnowGrey;
-		border-color:darken($colorSnowGrey, 15%);
 	}
 	&.reviewing {
 		background-color:$colorOrchid;
-		border-color:darken($colorOrchid, 15%);
 	}
 	&.accepted {
 		background-color:$colorGreen;
-		border-color:darken($colorGreen, 15%);
 	}
 }
