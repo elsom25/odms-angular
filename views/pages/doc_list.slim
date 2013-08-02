@@ -31,9 +31,11 @@ div(ng-controller='MainCtrl as main')
             td.owner
               | {{doc.owner || '-'}}
             td.action
-              a.button.small ng-click="doc.owner = 'Jesse McGinnis'" ng-class="{disabled: doc.owner == 'Jesse McGinnis'}" Claim
-              a.button.small ng-show="doc.state == 'Needs Rework'" ng-click="doc.state = 'In Progress'"  Start
-              a.button.small ng-show="doc.state == 'In Progress'" ng-click="doc.state = 'Pending'" Submit
-              a.button.small ng-show="doc.state == 'Pending'" ng-click="doc.state = 'In Progress'" Unsubmit
+              a.button.small.radius ng-click="doc.owner = 'Jesse McGinnis'" ng-class="{disabled: doc.owner == 'Jesse McGinnis'}" Claim
+              a.button.small.radius ng-show="doc.state == 'Needs Rework'" ng-click="doc.state = 'In Progress'"  Start
+              a.button.small.radius ng-show="doc.state == 'In Progress'" ng-click="doc.state = 'Pending'" Submit
+              a.button.small.radius ng-show="doc.state == 'Pending'" ng-click="doc.state = 'In Progress'" Unsubmit
+              a.button.small.radius.secondary ng-show="doc.state == 'In Progress'" Edit
+              a.button.small.radius.secondary ng-hide="doc.state == 'In Progress'" View
 
       a.button href='' data-reveal-id='newMathDocument' Add New Document
