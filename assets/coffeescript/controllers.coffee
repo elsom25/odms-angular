@@ -22,6 +22,8 @@ class MainController
 
   documents: ->
     @model.documents
+  tasklist: ->
+    @model.tasklist
 
   addDocument: ->
     d = new Date
@@ -34,8 +36,9 @@ class MainController
       owner: null
     @model.addDocument doc
     @docTitle = ''
+      
 
-app.controller 'MainCtrl', ['DocumentService',
+app.controller 'MainCtrl', ['DocumentService', 'TaskService'
   (model) -> new MainController(model)
 ]
 
@@ -46,6 +49,8 @@ class LoginController
   users =
     jc2mcgin: STANDARD
     ad3min: ADMIN
+    user: STANDARD
+    admin: ADMIN
 
   # Public
   user: ''
@@ -68,3 +73,5 @@ class LoginController
       @error = "#{@user} is an invalid login"
 
 app.controller 'LoginCtrl', LoginController
+
+
