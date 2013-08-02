@@ -23,6 +23,10 @@ app.config ['$routeProvider',
       templateUrl: 'pages/doc.html'
       controller:  'MainCtrl'
 
+    $routeProvider.when '/tasklist',
+      templateUrl: 'pages/task_list.html'
+      controller: 'MainCtrl'
+
     # catch all, default to login
     $routeProvider.otherwise redirectTo: '/login'
 ]

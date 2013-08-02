@@ -1,0 +1,25 @@
+div(ng-controller='MainCtrl as main')
+  .row
+    .small-12.columns
+      h2
+        ' Task List
+        small Team View
+
+  .row
+    .small-12.columns
+      table
+        thead
+          tr
+            th Action
+            th By
+            th Date
+        tbody
+          tr(ng-repeat="task in main.tasklist()"
+            td.title
+              | {{task.title}}
+            td.owner
+              | {{task.owner}}
+            td.date
+              | {{task.date}}
+
+      a.button href='' data-reveal-id='' Add New Document
