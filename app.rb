@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra/base'
 
 require 'coffee-script'
+
 require 'sass'
 require 'slim'
 

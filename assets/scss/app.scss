@@ -1,1 +1,6 @@
 table { width:100%; }
+
+$gummiRed:#FC1501;
+.redButton {
+  @include button($bg: $gummiRed);
+}
