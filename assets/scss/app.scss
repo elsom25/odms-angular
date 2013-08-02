@@ -1,6 +1,20 @@
 table { width:100%; }
 
-$gummiRed:#FC1501;
-.redButton {
-	background:$gummiRed;
+.status {
+	text-decoration:uppercase;
+	&.needs.rework {
+		background-color:#6183A6;
+	}
+	&.in.progress {
+		background-color:#EE5C42;
+	}
+	&.pending {
+		background-color:#9ACD32;
+	}
+	&.reviewing {
+		background-color:#CD69C9;
+	}
+	&.accepted {
+		background-color:#8B8989;
+	}
 }
