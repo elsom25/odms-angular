@@ -26,20 +26,32 @@ html(lang='en' ng-app='odms')
   body
     div(role="main" ng-view)
 
+    footer
+      hr
+      .row
+        .small-12.columns
+          ul.inline-list
+            li: small
+              a href='/#/admin/list' Admin
+            li: small
+              a href='/#/list' Standard
+
     #newAdminDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
       h3 New Document
       .row
         .small-12.columns
           input(type='text' ng-model='main.docTitle' placeholder='Document Title')
       .row
-        .small-4.columns
+        .small-6.columns
           select(ng-model='main.docTeam' ng-options='t for t in main.teams' required)
             option(value='') -- chose team --
-        .small-4.columns
+        .small-6.columns
           select(ng-model='main.docType' ng-options='t for t in main.types' required)
             option(value='') -- chose type --
-        .small-4.columns
-          button(ng-click='main.addDocument()') Add Document
+      .row
+        .small-12.columns
+          a.button.radius.secondary.small Upload Document
+          a.button.radius.small.right(ng-click='main.addDocument()') Save
 
       a.close-reveal-modal &#215;
 
@@ -49,13 +61,15 @@ html(lang='en' ng-app='odms')
         .small-12.columns
           input(type='text' ng-model='main.docTitle' placeholder='Document Title')
       .row
-        .small-4.columns
+        .small-6.columns
           select(ng-model='main.docTeam' ng-options="t for t in main.teams | filter:'Math'" required)
-        .small-4.columns
+        .small-6.columns
           select(ng-model='main.docType' ng-options='t for t in main.types' required)
             option(value='') -- chose type --
-        .small-4.columns
-          button(ng-click='main.addDocument()') Add Document
+      .row
+        .small-12.columns
+          a.button.radius.secondary.small Upload Document
+          a.button.radius.small.right(ng-click='main.addDocument()') Save
 
       a.close-reveal-modal &#215;
 
