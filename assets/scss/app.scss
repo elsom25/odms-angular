@@ -1,29 +1,33 @@
 table {
-	width:100%;
-	.details { width:35%; }
+  width:100%;
+  .details { width:35%; }
 }
 
 .top-bar {
-	text-shadow: 0 0 0.1em #fff;
+  text-shadow: 0 0 0.1em #fff;
 }
 
 .button.small.radius {
-	margin-right: 0.3em;
+  margin-right: 0.3em;
 }
 
 .header {
-	h2 { display: inline; }
-	.button {
-		margin-top:0.5em;
-		float:right;
-	}
+  h2 { display: inline; }
+  .button {
+    margin-top:0.5em;
+    float:right;
+  }
 }
 
 footer.sticky {
+  border-top: 1px solid #DDD;
+  margin-top: 1em;
+  padding-top: 1em;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  background:white;
 }
 
 $colorBlue: #2284A1;
@@ -33,24 +37,24 @@ $colorOrchid: #CD69C9;
 $colorSnowGrey: #8B8989;
 
 .status {
-	font-size:0.9em;
-	font-weight:400 !important;
-	letter-spacing:0.2em;
-	text-transform:uppercase;
-	padding: 0.25em 0.625em !important;
-	&.needs.rework {
-		background-color:$colorRed;
-	}
-	&.in.progress {
-		background-color:$colorBlue;
-	}
-	&.pending {
-		background-color:$colorSnowGrey;
-	}
-	&.reviewing {
-		background-color:$colorOrchid;
-	}
-	&.accepted {
-		background-color:$colorGreen;
-	}
+  font-size:0.9em;
+  font-weight:400 !important;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  padding: 0.25em 0.625em !important;
+  &.needs.rework {
+    background-color:$colorRed;
+  }
+  &.in.progress {
+    background-color:$colorBlue;
+  }
+  &.pending {
+    background-color:$colorSnowGrey;
+  }
+  &.reviewing {
+    background-color:$colorOrchid;
+  }
+  &.accepted {
+    background-color:$colorGreen;
+  }
 }
