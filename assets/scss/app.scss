@@ -1,31 +1,34 @@
 table { width:100%; }
 
-$colorLakeErie: #6183A6;
-$colorTomato: #EE5C42;
-$colorYellowGreen: #9ACD32;
+$colorBlue: #2284A1;
+$colorRed: #C60F13;
+$colorGreen: #457A1A;
 $colorOrchid: #CD69C9;
 $colorSnowGrey: #8B8989;
 
 .status {
-	text-decoration:uppercase;
+	font-size:0.9em;
+	letter-spacing:0.2em;
+	text-transform:uppercase;
+	padding: 0.25em 0.625em;
 	&.needs.rework {
-		background-color:$colorLakeErie;
-		border-color:darken($colorLakeErie, 15%);
+		background-color:$colorRed;
+		border-color:darken($colorRed, 15%);
 	}
 	&.in.progress {
-		background-color:$colorTomato;
-		border-color:darken($colorTomato, 15%);
+		background-color:$colorBlue;
+		border-color:darken($colorBlue, 15%);
 	}
 	&.pending {
-		background-color:$colorYellowGreen;
-		border-color:darken($colorYellowGreen, 15%);
+		background-color:$colorSnowGrey;
+		border-color:darken($colorSnowGrey, 15%);
 	}
 	&.reviewing {
 		background-color:$colorOrchid;
 		border-color:darken($colorOrchid, 15%);
 	}
 	&.accepted {
-		background-color:$colorSnowGrey;
-		border-color:darken($colorSnowGrey, 15%);
+		background-color:$colorGreen;
+		border-color:darken($colorGreen, 15%);
 	}
 }
