@@ -22,7 +22,7 @@ class DocumentModel
     }
     {
       team: 'Cross-Campus'
-      state: 'Needs Work'
+      state: 'Needs Rework'
       type: 'event'
       title: 'Monte Carlo'
       last_edited: '2013-07-22'
