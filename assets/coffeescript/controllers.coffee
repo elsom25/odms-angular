@@ -2,7 +2,7 @@ app = angular.module('odms.controllers', [])
 
 class MainController
   newThing: ''
-  constructor: (@model) ->
+  constructor: (@docModel, @taskModel) ->
 
   teams: [
     'AHS'
@@ -21,9 +21,10 @@ class MainController
   ]
 
   documents: ->
-    @model.documents
+    @docModel.documents
+
   tasklist: ->
-    @model.tasklist
+    @taskModel.tasklist
 
   addDocument: ->
     d = new Date
@@ -34,12 +35,11 @@ class MainController
       title: @docTitle
       last_edited: "#{d.getFullYear()}-0#{d.getMonth()+1}-#{d.getDate()}"
       owner: null
-    @model.addDocument doc
+    @docModel.addDocument doc
     @docTitle = ''
-      
 
 app.controller 'MainCtrl', ['DocumentService', 'TaskService'
-  (model) -> new MainController(model)
+  (docModel, taskModel) -> new MainController(docModel, taskModel)
 ]
 
 class LoginController

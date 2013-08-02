@@ -38,5 +38,5 @@ class DocumentModel
       false
 
 app.factory 'DocumentService', [
-  () -> model = new DocumentModel();
+  () -> model = new DocumentModel()
 ]

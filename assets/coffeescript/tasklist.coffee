@@ -1,4 +1,4 @@
-app = angular.module('odms.documents', [])
+app = angular.module('odms.tasklist', [])
 
 class TaskModel
   constructor: -> @
@@ -26,6 +26,5 @@ class TaskModel
 ###
 
 app.factory 'TaskService', [
-  () -> model = new TaskModel();
+  () -> model = new TaskModel()
 ]
-  
