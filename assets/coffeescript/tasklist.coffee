@@ -14,16 +14,14 @@ class TaskModel
       owner: 'Terry'
       date: '2013/07/31'
     }
-   ]
+  ]
 
-###
   addTask: (task) ->
     if task?.title?.length
       @tasklist.push(task)
       true
     else
       false
-###
 
 app.factory 'TaskService', [
   () -> model = new TaskModel()

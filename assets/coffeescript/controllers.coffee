@@ -38,6 +38,15 @@ class MainController
     @docModel.addDocument doc
     @docTitle = ''
 
+  addTask: ->
+    d = new Date
+    task = 
+      title: @newTask
+      date: "#{d.getFullYear()}/0#{d.getMonth()+1}/0#{d.getDate()}"
+      owner: "OWNER"
+    @taskModel.addTask task
+    @newTask = ''
+
 app.controller 'MainCtrl', ['DocumentService', 'TaskService'
   (docModel, taskModel) -> new MainController(docModel, taskModel)
 ]
