@@ -15,12 +15,30 @@ class DocumentModel
     }
     {
       team: 'Math'
-      state: 'In Progress'
+      state: 'Accepted'
       type: 'event'
       title: 'Earn Your Tie'
       note: ''
       last_edited: '2013-07-26'
       owner: 'Sacha Forstner'
+    }
+    {
+      team: 'Math'
+      state: 'Needs Rework'
+      type: 'event'
+      title: 'Waterloo Park Day'
+      note: ''
+      last_edited: '2013-07-26'
+      owner: 'Sacha Forstner'
+    }
+    {
+      team: 'Math'
+      state: 'In Progress'
+      type: 'budget'
+      title: 'Budget'
+      note: ''
+      last_edited: '2013-07-26'
+      owner: 'Jesse McGinnis'
     }
     {
       team: 'Cross-Campus'
@@ -30,6 +48,24 @@ class DocumentModel
       note: 'Redo section 3.'
       last_edited: '2013-07-22'
       owner: null
+    }
+    {
+      team: 'Engineerig'
+      state: 'In Progress'
+      type: 'budget'
+      title: 'Budget'
+      note: ''
+      last_edited: '2013-07-22'
+      owner: null
+    }
+    {
+      team: 'Engineerig'
+      state: 'Pending'
+      type: 'event'
+      title: 'Earn Your Hardhat'
+      note: ''
+      last_edited: '2013-07-22'
+      owner: 'Liz Celantano'
     }
   ]
 

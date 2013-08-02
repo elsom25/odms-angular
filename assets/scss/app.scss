@@ -12,12 +12,15 @@ table {
 }
 
 .header {
+  margin-bottom: 1em !important;
   h2 { display: inline; }
-  .button {
+  .button, .label {
     margin-top:0.5em;
     float:right;
   }
 }
+
+.main { margin-bottom:3em; }
 
 footer.sticky {
   border-top: 1px solid #DDD;

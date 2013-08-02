@@ -22,7 +22,7 @@ div(ng-controller='MainCtrl as main')
       h2
         ' Document Listing
         small Admin View
-	  a.button href='' data-reveal-id='newAdminDocument' Add New Document
+	  a.button.small.radius href='' data-reveal-id='newAdminDocument' Add New Document
   .row
     .small-12.columns
       table
@@ -54,7 +54,7 @@ div(ng-controller='MainCtrl as main')
             td.owner
               | {{doc.owner || '-'}}
             td.action
-              a.button.small.radius ng-show="doc.state == 'Pending'" ng-click="doc.state = 'Reviewing'"  Begin Review
+              a.button.small.radius ng-show="doc.state == 'Pending'" ng-click="doc.state = 'Reviewing'; doc.note = ''"  Begin Review
               a.button.small.radius.success ng-show="doc.state == 'Reviewing'" ng-click="doc.state = 'Accepted'; doc.note = ''"  Accept
               a.button.small.radius.alert ng-show="doc.state == 'Reviewing'" data-reveal-id='rejectDocument' Deny
               a.button.small.radius.secondary ng-show="doc.state == 'Reviewing'" Edit

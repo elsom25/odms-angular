@@ -36,23 +36,23 @@ class MainController
       state: 'In Progress'
       type: @docType
       title: @docTitle
-      last_edited: "#{d.getFullYear()}-0#{d.getMonth()+1}-#{d.getDate()}"
+      last_edited: "#{d.getFullYear()}-0#{d.getMonth()+1}-0#{d.getDate()}"
       owner: null
     @docModel.addDocument doc
     @docTitle = ''
 
   addTask: ->
     d = new Date
-    task = 
+    task =
       title: @newTask
       date: "#{d.getFullYear()}-0#{d.getMonth()+1}-0#{d.getDate()}"
-      owner: "OWNER"
+      owner: 'Jesse McGinnis'
     @taskModel.addTask task
     @newTask = ''
 
   addFeedback: ->
     d = new Date
-    feedback = 
+    feedback =
       title: @newFeedback
       date: "#{d.getFullYear()}-0#{d.getMonth()+1}-0#{d.getDate()}"
       owner: "OWNER"

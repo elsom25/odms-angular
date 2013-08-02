@@ -19,11 +19,12 @@ header
         li: a href='#' Logout
 
 div(ng-controller='MainCtrl as main')
-  .row
+  .row.header
     .small-12.columns
       h2
         ' Detail #13: Earn Your Tie
         small Event
+      .label.radius.status.accepted Accepted
 
   .row
     .small-12.columns
@@ -39,7 +40,7 @@ div(ng-controller='MainCtrl as main')
         tbody
           tr
             td.revision 7
-            td.details Great! Looks good.
+            td.details -
             td.status
               .label.radius.status.reviewing' Reviewing
             td.status
@@ -49,7 +50,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-07-17
           tr
             td.revision 6
-            td.details Reviewing.
+            td.details -
             td.status
               .label.radius.status.pending' Pending
             td.status
@@ -59,7 +60,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-07-09
           tr
             td.revision 5
-            td.details Completely revamped sections 2-4. A few cleanups elsewhere, but nothing big.
+            td.details -
             td.status
               .label.radius.status.in.progress' In Progress
             td.status
@@ -69,7 +70,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-07-07
           tr
             td.revision 4
-            td.details Meeting w/ Directors had to revision necessary sections.
+            td.details -
             td.status
               .label.radius.status.needs.rework' Needs Rework
             td.status
@@ -79,7 +80,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-06-26
           tr
             td.revision 3
-            td.details Please revist sections 2-4.
+            td.details Please revist sections 2-4. Section 1 needs to be completely rethought.
             td.status
               .label.radius.status.reviewing' Reviewing
             td.status
@@ -89,7 +90,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-06-18
           tr
             td.revision 2
-            td.details First round of reviews started.
+            td.details -
             td.status
               .label.radius.status.pending' Pending
             td.status
@@ -99,7 +100,7 @@ div(ng-controller='MainCtrl as main')
             td.date 2013-06-10
           tr
             td.revision 1
-            td.details Please review ASAP.
+            td.details -
             td.status
               .label.radius.status.in.progress' In Progress
             td.status

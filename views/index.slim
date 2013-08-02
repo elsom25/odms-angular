@@ -25,7 +25,7 @@ html(lang='en' ng-app='odms')
     script src='/lib/js/custom.modernizr.js'
 
   body
-    div(role="main" ng-view)
+    .main(role="main" ng-view)
 
     footer.sticky
       .row
@@ -69,7 +69,7 @@ html(lang='en' ng-app='odms')
       .row
         .small-12.columns
           input(type='file' value='Upload Document')
-          /a.button.radius.secondary.small Upload Document 
+          /a.button.radius.secondary.small Upload Document
           a.button.radius.small.right(ng-click='main.addDocument()') Save
 
       a.close-reveal-modal &#215;
@@ -82,7 +82,7 @@ html(lang='en' ng-app='odms')
       .row
         .small-12.columns
           input(type='file' value='Upload Document')
-          /a.button.radius.secondary.small Upload Document 
+          /a.button.radius.secondary.small Upload Document
           a.button.radius.small.right(ng-click='main.addFeedback()') Save
 
       a.close-reveal-modal &#215;
