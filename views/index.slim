@@ -68,8 +68,22 @@ html(lang='en' ng-app='odms')
             option(value='') -- chose type --
       .row
         .small-12.columns
-          a.button.radius.secondary.small Upload Document
+          input(type='file' value='Upload Document')
+          /a.button.radius.secondary.small Upload Document 
           a.button.radius.small.right(ng-click='main.addDocument()') Save
+
+      a.close-reveal-modal &#215;
+
+    #newFeedbackDocument.reveal-modal.medium(ng-controller='MainCtrl as main')
+      h3 New Feedback Document
+      .row
+        .small-12.columns
+          input(type='text' ng-model='main.newFeedback' placeholder='Feedback Title')
+      .row
+        .small-12.columns
+          input(type='file' value='Upload Document')
+          /a.button.radius.secondary.small Upload Document 
+          a.button.radius.small.right(ng-click='main.addFeedback()') Save
 
       a.close-reveal-modal &#215;
 
