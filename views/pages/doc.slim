@@ -2,10 +2,87 @@ div(ng-controller='MainCtrl as main')
   .row
     .small-12.columns
       h2
-        ' Document #123: Title
-        small Standard View
+        ' Docment #13: Earn Your Tie
+        small Event
 
   .row
     .small-12.columns
-      p Stuff
-      p More Stuff
+      table
+        thead
+          tr
+            th Revision
+            th Details
+            th Status
+            th Action
+            th Date
+        tbody
+          tr
+            td.revision 4
+            td.details Great! Looks good.
+            td.status
+              span.state' In Progress
+              ' ->
+              span.state Pending
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-26
+          tr
+            td.revision 4
+            td.details Great! Looks good.
+            td.status
+              span.state' In Progress
+              ' ->
+              span.state Pending
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-26
+          tr
+            td.revision 4
+            td.details Great! Looks good.
+            td.status
+              span.state' In Progress
+              ' ->
+              span.state Pending
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-26
+          tr
+            td.revision 3
+            td.details Meeting w/ Directors had to revision necessary sections.
+            td.status
+              span.state' Needs Rework
+              ' ->
+              span.state In Progress
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-07-26
+          tr
+            td.revision 3
+            td.details Please revist sections 2-4.
+            td.status
+              span.state' Reviewing
+              ' ->
+              span.state Needs Rework
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-06-18
+          tr
+            td.revision 2
+            td.details First round of reviews started.
+            td.status
+              span.state' Pending
+              ' ->
+              span.state Reviewing
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-06-10
+          tr
+            td.revision 1
+            td.details Please review ASAP.
+            td.status
+              span.state' In Progress
+              ' ->
+              span.state Pending
+            td.action
+              a.button.small.radius.secondary View
+            td.date 2013-06-09

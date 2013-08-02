@@ -11,15 +11,12 @@ app.config ['$routeProvider',
     $routeProvider.when '/admin/list',
       templateUrl: 'pages/admin_doc_list.html'
       controller:  'MainCtrl'
-    $routeProvider.when '/admin/document/123',
-      templateUrl: 'pages/admin_doc.html'
-      controller:  'MainCtrl'
 
     # NON-ADMIN standard routes
     $routeProvider.when '/list',
       templateUrl: 'pages/doc_list.html'
       controller:  'MainCtrl'
-    $routeProvider.when '/document/123',
+    $routeProvider.when '/document/13',
       templateUrl: 'pages/doc.html'
       controller:  'MainCtrl'
 
