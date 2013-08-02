@@ -29,7 +29,8 @@ div(ng-controller='MainCtrl as main')
             td.last_edited
               | {{doc.last_edited}}
             td.status
-              | {{doc.state}}
+              .label.radius.status ng-class="doc.state | lowercase"
+                | {{doc.state}}
             td.notes
             td.owner
               | {{doc.owner || '-'}}
