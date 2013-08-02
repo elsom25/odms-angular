@@ -7,11 +7,12 @@ button {
 	margin-right: 0.3em;
 }
 
-button.addNewDoc {
-    display: box;
-    box-orient: horizontal;
-    box-pack: center;
-    box-align: right;
+.inline {
+	display: inline;
+}
+
+.button.addNewDoc {
+	float:right;
 }
 
 $colorBlue: #2284A1;
