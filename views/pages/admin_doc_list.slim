@@ -4,7 +4,7 @@ div(ng-controller='MainCtrl as main')
       h2
         ' Document Listing
         small Admin View
-
+	  a.button.addNewDoc href='' data-reveal-id='newAdminDocument' Add New Document
   .row
     .small-12.columns
       table
@@ -42,4 +42,3 @@ div(ng-controller='MainCtrl as main')
               a.button.small.radius.secondary ng-hide="doc.state == 'Reviewing'" View
 
 
-      a.button href='' data-reveal-id='newAdminDocument' Add New Document

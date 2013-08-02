@@ -3,6 +3,17 @@ table {
 	.details { width:35%; }
 }
 
+button {
+	margin-right: 0.3em;
+}
+
+button.addNewDoc {
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: right;
+}
+
 $colorBlue: #2284A1;
 $colorRed: #C60F13;
 $colorGreen: #457A1A;
