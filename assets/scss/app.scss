@@ -1,20 +1,31 @@
 table { width:100%; }
 
+$colorLakeErie: #6183A6;
+$colorTomato: #EE5C42;
+$colorYellowGreen: #9ACD32;
+$colorOrchid: #CD69C9;
+$colorSnowGrey: #8B8989;
+
 .status {
 	text-decoration:uppercase;
 	&.needs.rework {
-		background-color:#6183A6;
+		background-color:$colorLakeErie;
+		border-color:darken($colorLakeErie, 15%);
 	}
 	&.in.progress {
-		background-color:#EE5C42;
+		background-color:$colorTomato;
+		border-color:darken($colorTomato, 15%);
 	}
 	&.pending {
-		background-color:#9ACD32;
+		background-color:$colorYellowGreen;
+		border-color:darken($colorYellowGreen, 15%);
 	}
 	&.reviewing {
-		background-color:#CD69C9;
+		background-color:$colorOrchid;
+		border-color:darken($colorOrchid, 15%);
 	}
 	&.accepted {
-		background-color:#8B8989;
+		background-color:$colorSnowGrey;
+		border-color:darken($colorSnowGrey, 15%);
 	}
 }
