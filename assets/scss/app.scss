@@ -1,4 +1,7 @@
-table { width:100%; }
+table {
+	width:100%;
+	.details { width:35%; }
+}
 
 $colorBlue: #2284A1;
 $colorRed: #C60F13;
