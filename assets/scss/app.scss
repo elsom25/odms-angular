@@ -1,6 +1,33 @@
-table { width:100%; }
+table {
+	width:100%;
+	.details { width:35%; }
+}
 
-$gummiRed:#FC1501;
-.redButton {
-	background:$gummiRed;
+$colorBlue: #2284A1;
+$colorRed: #C60F13;
+$colorGreen: #457A1A;
+$colorOrchid: #CD69C9;
+$colorSnowGrey: #8B8989;
+
+.status {
+	font-size:0.9em;
+	font-weight:400 !important;
+	letter-spacing:0.2em;
+	text-transform:uppercase;
+	padding: 0.25em 0.625em !important;
+	&.needs.rework {
+		background-color:$colorRed;
+	}
+	&.in.progress {
+		background-color:$colorBlue;
+	}
+	&.pending {
+		background-color:$colorSnowGrey;
+	}
+	&.reviewing {
+		background-color:$colorOrchid;
+	}
+	&.accepted {
+		background-color:$colorGreen;
+	}
 }

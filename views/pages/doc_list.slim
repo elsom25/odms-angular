@@ -20,13 +20,14 @@ div(ng-controller='MainCtrl as main')
         tbody
           tr(ng-repeat="doc in main.documents() | filter:{team: 'Math'}")
             td.title
-              | {{doc.title}}
+              a href='/#/document/13' {{doc.title}}
             td.type
               | {{doc.type}}
             td.last_edited
               | {{doc.last_edited}}
             td.status
-              | {{doc.state}}
+              .label.radius.status ng-class="doc.state | lowercase"
+                | {{doc.state}}
             td.notes
             td.owner
               | {{doc.owner || '-'}}
